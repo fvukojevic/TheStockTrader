@@ -2,21 +2,21 @@ export default [
   {
     id: 1,
     name: 'BWM',
-    price: 110,
+    stockPrice: 110,
   },
   {
     id: 2,
     name: 'Google',
-    price: 200,
+    stockPrice: 200,
   },
   {
     id: 3,
     name: 'Apple',
-    price: 250,
+    stockPrice: 250,
   },
   {
     id: 4,
     name: 'Twitter',
-    price: 50,
+    stockPrice: 50,
   }
 ]

@@ -4,7 +4,7 @@
         <div class="panel-heading">
           <h3 class="panel-title">
             {{ stock.name }}
-            <small>(Price: {{stock.price}})</small>
+            <small>(Price: {{stock.stockPrice}})</small>
           </h3>
         </div>
         <div class="panel-body">
@@ -44,7 +44,7 @@
       buyStock() {
         const order = {
           stockId: this.stock.id,
-          stockPrice: this.stock.price,
+          stockPrice: this.stock.stockPrice,
           quantity: this.quantity
         };
         this.$store.dispatch('buyStock', order);

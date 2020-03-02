@@ -11,11 +11,11 @@ const getters = {
         id: stock.id,
         quantity: stock.quantity,
         name: record.name,
-        price: record.price
+        stockPrice: record.stockPrice
       }
     });
   },
-  getFunds: state => {
+  getFunds: (state) => {
     return state.funds;
   }
 };
@@ -46,6 +46,7 @@ const mutations = {
 
 const actions = {
   sellStock: ({commit}, order) => {
+    console.log(order);
     commit('sellStock', order);
   }
 };

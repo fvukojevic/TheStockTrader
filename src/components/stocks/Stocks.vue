@@ -15,7 +15,6 @@
     },
     computed: {
       stocks() {
-        console.log(this.$store);
         return this.$store.getters.getStocks;
       }
     }
