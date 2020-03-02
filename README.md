@@ -30,3 +30,7 @@ npm run lint
 ```
 
 ### APP IMAGES 
+
+![Alt text](https://github.com/fvukojevic/TheStockTrader/blob/master/gitImages/Screenshot%202020-03-02%20at%2016.28.11.png)
+
+![Alt text](https://github.com/fvukojevic/TheStockTrader/blob/master/gitImages/Screenshot%202020-03-02%20at%2016.28.24.png?raw=true)
