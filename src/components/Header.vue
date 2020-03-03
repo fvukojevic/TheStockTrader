@@ -14,7 +14,7 @@
         </ul>
         <strong class="navbar-text navbar-right">Funds: {{ funds | currency }}</strong>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">End Day</a></li>
+          <li><a href="#" @click="endDay">End Day</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Save & Load <span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -30,11 +30,21 @@
 
 <script>
   import { mapGetters } from 'vuex'
+  import { mapActions } from 'vuex'
+
   export default {
     computed: {
       ...mapGetters({
         funds: 'getFunds'
       })
+    },
+    methods: {
+      ...mapActions({
+        randomizeStocks: 'randomizeStocks'
+      }),
+      endDay() {
+        this.randomizeStocks();
+      }
     }
   }
 </script>
