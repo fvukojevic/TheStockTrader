@@ -14,14 +14,15 @@
             class="form-control"
             placeholder="quantity"
             v-model="quantity"
+            :class="{danger: insufficientQuantity}"
           >
         </div>
         <div class="pull-right">
           <button
             class="btn btn-primary"
             @click="sellStock"
-            :disabled="quantity <= 0"
-          >Sell
+            :disabled="insufficientQuantity || quantity <= 0"
+          >{{ insufficientQuantity ? 'Not Enough' : 'Sell'}}
           </button>
         </div>
       </div>
@@ -42,6 +43,11 @@
         quantity: 0
       }
     },
+    computed: {
+      insufficientQuantity() {
+        return this.quantity > this.stock.quantity;
+      }
+    },
     methods: {
       ...mapActions({
         sell: 'sellStock'
@@ -58,3 +64,9 @@
     }
   }
 </script>
+
+<style scoped>
+  .danger {
+    border: 1px solid red;
+  }
+</style>
