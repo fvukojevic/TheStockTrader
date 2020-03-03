@@ -14,9 +14,12 @@ const mutations = {
   setStocks(state, stocks) {
     state.stocks = stocks;
   },
-  /*rndStocks(state) {
-
-  }*/
+  rndStocks(state) {
+    console.log(state.stocks);
+    state.stocks.forEach(stock => {
+      stock.stockPrice = Math.round(stock.stockPrice * (1 + Math.random() - 0.4));
+    });
+  }
 };
 
 const actions = {
